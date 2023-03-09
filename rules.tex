@@ -1,0 +1,139 @@
+\documentclass[twoside]{article}
+
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{lipsum}
+
+\usepackage[top=0mm,bottom=0mm,right=0mm,left=0mm]{geometry}
+
+\fancyhf{}
+\fancyfoot[RE]{
+    tao.
+}
+\pagestyle{fancy}
+
+
+
+\begin{document}
+
+\fbox{
+    \begin{minipage}[t][0.49\paperheight]{0.94\textwidth}
+        \begin{multicols}{2}
+            \begin{turn}{180}
+            \fbox{
+                \begin{minipage}{0.45\textwidth}
+                    \lipsum[1]
+                    \lipsum[1]
+                \end{minipage}
+            }
+            \end{turn}
+            \fbox{
+                \begin{minipage}[t][0.45\textheight]{0.45\textwidth}
+                    \fbox{
+                        \begin{minipage}[t][0.22\textheight]{\textwidth}
+                            \lipsum[2]
+                        \end{minipage}
+                    }
+                    \fbox{
+                        \begin{minipage}[t][0.22\textheight]{\textwidth}
+                            \lipsum[2]
+                        \end{minipage}
+                    }
+                \end{minipage}
+            }
+        \end{multicols}
+    \end{minipage}
+}
+
+
+\begin{turn}{180}
+\fbox{
+    \begin{minipage}[t][0.49\paperheight]{0.94\textwidth}
+        \begin{multicols}{2}
+            \fbox{
+                \begin{minipage}[t][0.45\textheight]{0.45\textwidth}
+                    \fbox{
+                        \begin{minipage}[t][0.22\textheight]{\textwidth}
+                            \lipsum[2]
+                        \end{minipage}
+                    }
+                    \fbox{
+                        \begin{minipage}[t][0.22\textheight]{\textwidth}
+                            \lipsum[2]
+                        \end{minipage}
+                    }
+                \end{minipage}
+            }
+            \fbox{
+                \begin{minipage}[t][0.45\textheight]{0.45\textwidth}
+                    \fbox{
+                        \begin{minipage}[t][0.22\textheight]{\textwidth}
+                            \lipsum[2]
+                        \end{minipage}
+                    }
+                    \fbox{
+                        \begin{minipage}[t][0.22\textheight]{\textwidth}
+                            \lipsum[2]
+                        \end{minipage}
+                    }
+                \end{minipage}
+            }
+        \end{multicols}
+    \end{minipage}
+}
+\end{turn}
+
+
+\newpage
+
+\newgeometry{top=0mm,bottom=0mm,right=0mm,left=0mm,includeheadfoot}
+
+\begin{multicols}{3}
+    \fbox{
+        \begin{minipage}[t][0.9\paperheight]{1in}
+            \hrulefill
+            \hrulefill
+            \hrulefill
+            \hrulefill
+            \hrulefill
+            \hrulefill
+            \hrulefill
+        \end{minipage}
+    }
+    \fbox{
+        \begin{minipage}[t][0.9\textheight]{0.35\textwidth}
+            \fbox{
+                \begin{minipage}[t][0.45\textheight]{\textwidth}
+                    \lipsum[2]
+                \end{minipage}
+            }
+            \fbox{
+                \begin{minipage}[t][0.45\textheight]{\textwidth}
+                    \lipsum[2]
+                \end{minipage}
+            }
+        \end{minipage}
+    }
+    \hspace*{1.7in}
+    \fbox{
+        \begin{minipage}[t][0.9\textheight]{0.35\textwidth}
+            \fbox{
+                \begin{minipage}[t][0.45\textheight]{\textwidth}
+                    \lipsum[2]
+                \end{minipage}
+            }
+            \fbox{
+                \begin{minipage}[t][0.45\textheight]{\textwidth}
+                    \lipsum[2]
+                \end{minipage}
+            }
+        \end{minipage}
+    }
+
+\end{multicols}
+
+
+\end{document}
+
+
