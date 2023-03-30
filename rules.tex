@@ -8,9 +8,17 @@
 \usepackage{tikz}
 \usepackage{amsmath}
 \usepackage{caption}
+\usepackage{fontspec}
+\usepackage{amssymb}
+
 
 \usepackage[top=0mm,bottom=0mm,right=0mm,left=0mm]{geometry}
 \newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\newfontfamily\greekfont[Scale=MatchUppercase,Ligatures=TeX]{Kerkis}
+\newcommand{\textgreek}[1]
+    {\bgroup\greekfont{#1}\egroup} % Greek text
+
 
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
@@ -79,106 +87,31 @@
 \newgeometry{top=0mm,bottom=10mm,right=0mm,left=0mm,includeheadfoot}
 
 \begin{multicols}{3}
-    \fbox{
-        \begin{minipage}[t][0.95\paperheight]{1in}
-            \centering{
-            \includegraphics[width=0.8\linewidth]{img/foul.png}
+    \begin{minipage}[t][0.95\paperheight]{1in}
+        \input{8-handsignals}
+    \end{minipage}
 
-            1. Foul
+    \begin{minipage}[t][0.9\textheight]{0.35\textwidth}
 
-            \includegraphics[width=\linewidth]{img/violation.png}
-
-            2. Violation
-
-            \includegraphics[width=\linewidth]{img/mark-inf.png}
-
-            12. Marking Infraction
-
-            \includegraphics[width=0.8\linewidth]{img/timing.png}
-
-            14. Timing Violation
-
-            \includegraphics[width=0.6\linewidth]{img/offside.png}
-
-            15. Offside
-
-            \includegraphics[width=0.6\linewidth]{img/stoppage.png}
-
-            18. Stoppage
-
-            \includegraphics[width=\linewidth]{img/gender-w.png}
-
-            20. Gender Women
-
-            \includegraphics[width=\linewidth]{img/play-stop.png}
-
-            21. Stop play
-        }
+        \begin{minipage}[t][0.45\textheight]{\textwidth}
+            \input{4-turnovers}
         \end{minipage}
-    }
-    \fbox{
-        \begin{minipage}[t][0.9\textheight]{0.35\textwidth}
-            \fbox{
-                \begin{minipage}[t][0.45\textheight]{\textwidth}
-                    \begin{center}\underline{\uppercase{turnovers}}\end{center}
-                    \begin{itemize}
-                        \item
-                        \item
-                        \item
-                        \item
-                        \item
-                        \item
-                    \end{itemize}
-                    \begin{center}[5]\end{center}
-                \end{minipage}
-            }
-            \fbox{
-                \begin{minipage}[t][0.45\textheight]{\textwidth}
-                    \begin{center}\underline{\uppercase{fouls}}\end{center}
-                    \begin{itemize}
-                        \item
-                        \item
-                        \item
-                        \item
-                        \item
-                        \item
-                    \end{itemize}
-                    \begin{center}[6]\end{center}
-                \end{minipage}
-            }
+
+        \begin{minipage}[t][0.45\textheight]{\textwidth}
+            \input{5-fouls}
         \end{minipage}
-    }
+    \end{minipage}
+
     \hspace*{1.7in}
-    \fbox{
-        \begin{minipage}[t][0.9\textheight]{0.35\textwidth}
-            \fbox{
-                \begin{minipage}[t][0.45\textheight]{\textwidth}
-                    \begin{center}\underline{\uppercase{infractions}}\end{center}
-                    \begin{itemize}
-                        \item
-                        \item
-                        \item
-                        \item
-                        \item
-                        \item
-                    \end{itemize}
-                    \begin{center}[7]\end{center}
-                \end{minipage}
-            }
-            \fbox{
-                \begin{minipage}[t][0.45\textheight]{\textwidth}
-                    \begin{center}\underline{\uppercase{violations}}\end{center}
-                    \small{	
-                    (The nourishment of the person)
-                    All in the world know the beauty of the beautiful, and in doing this they have (the idea of) what ugliness is; they all know the skill of the skilful, and in doing this they have (the idea of) what the want of skill is. So it is that existence and non-existence give birth the one to (the idea of) the other; that difficulty and ease produce the one (the idea of) the other; that length and shortness fashion out the one the figure of the other; that (the ideas of) height and lowness arise from the contrast of the one with the other; that the musical notes and tones become harmonious through the relation of one with another; and that being before and behind give the idea of one following another. \textbf{Therefore the sage manages affairs without doing anything, and conveys his instructions without the use of speech. All things spring up, and there is not one which declines to show itself; they grow, and there is no claim made for their ownership; they go through their processes, and there is no expectation (of a reward for the results). The work is accomplished, and there is no resting in it (as an achievement).}
-The work is done, but how no one can see;
-'Tis this that makes the power not cease to be.
-                    }
-                \begin{center}[8]\end{center}
-                \end{minipage}
-            }
+
+    \begin{minipage}[t][0.9\textheight]{0.35\textwidth}
+        \begin{minipage}[t][0.45\textheight]{\textwidth}
+            \input{6-infractions}
         \end{minipage}
-    }
+        \begin{minipage}[t][0.45\textheight]{\textwidth}
+            \input{7-violations}
+        \end{minipage}
+    \end{minipage}
 
 \end{multicols}
 
